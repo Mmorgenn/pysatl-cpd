@@ -23,8 +23,9 @@ class DistanceThreshold(IDetectorSSA):
         Initializes SSA CPD algorithm distance detector with given threshold.
         :param threshold: threshold for distance calculation.
         """
+        if not(0 <= threshold <= 1):
+            raise ValueError("Threshold must be in [0.0, 1.0]")
         self._threshold = threshold
-        assert 0.0 <= self._threshold <= 1.0, "Threshold must be in [0.0, 1.0]"
 
     def detect(
         self, subspace: npt.NDArray[np.float64], test_data: list[np.float64]
@@ -55,4 +56,4 @@ class DistanceThreshold(IDetectorSSA):
         """
         Clears the detector's state.
         """
-        pass
+        return
