@@ -1,10 +1,10 @@
 import numpy as np
 import pytest
 
-from pysatl_cpd.core.algorithms.ssa.embedding import BasicEmbedding
 from pysatl_cpd.core.algorithms.ssa.decomposition import BasicSVD
-from pysatl_cpd.core.algorithms.ssa.grouping import ConstantGrouping
 from pysatl_cpd.core.algorithms.ssa.detectors import DistanceThreshold
+from pysatl_cpd.core.algorithms.ssa.embedding import BasicEmbedding
+from pysatl_cpd.core.algorithms.ssa.grouping import ConstantGrouping
 from pysatl_cpd.core.algorithms.ssa.ssa import SSA
 from pysatl_cpd.core.algorithms.ssa_online_algorithm import SSAOnline
 
