@@ -49,7 +49,7 @@ class DistanceThreshold(IDetectorSSA):
         if total_sum == 0:
             return False
 
-        return (1 - (proj_sum / total_sum)) > self._threshold
+        return bool(1 - (proj_sum / total_sum) > self._threshold)
 
     def clean(self) -> None:
         """
